@@ -6,9 +6,9 @@ from colorama import Fore, Style, init
 # Inisialisasi colorama
 init(autoreset=True)
 
-# ===========================================================
-#                          DATA MOBIL
-# ===========================================================
+# =======================================================================================================================================#
+#                                                              DATA MOBIL
+# =======================================================================================================================================#
 
 # Daftar Aset Mobil
 Aset_Mobil = [
@@ -86,9 +86,9 @@ Aset_Mobil = [
 
 List_Mobil_Tersewa = []
 
-# ================================================================================================================= #
-#                                               FUNGSI SIGN UP / LOGIN
-# ================================================================================================================= #
+# ====================================================================================================================================== #
+#                                                       FUNGSI SIGN UP / LOGIN
+# ====================================================================================================================================== #
 
 users = {}
 #=========== Fungsi SIGN UP ===========#
@@ -155,9 +155,9 @@ def func_login_admin():
                 print(Fore.RED + '⚠️  Password salah. Akses ditolak!')
                 continue
 
-# ================================================================================================================= #
-#                                                 FUNGSI PELANGGAN
-# ================================================================================================================= #
+# ====================================================================================================================================== #
+#                                                               FUNGSI PELANGGAN
+# ====================================================================================================================================== #
 # Menu Pelanggan: Yuk Sewa Mobil 
 def func_yuk_sewa():
     while True:
@@ -369,7 +369,7 @@ def func_balikin_mobil():
             
                 # Hapus mobi dari list yang disewa
                 List_Mobil_Tersewa.remove(mobil_ditemukan)
-                print(Fore.GREEN + f'Mobil dengan plat {plat_mobil} berhasil dikembalikan! ✔️')
+                print(Fore.GREEN + f'✔️  Mobil dengan plat {plat_mobil} berhasil dikembalikan!')
 
                 # Tampilkan Receipt Pengembalian
                 print(Fore.GREEN + '''
@@ -417,7 +417,9 @@ def func_hubungi_cs():
     input(Fore.CYAN + "Tekan Enter untuk kembali ke menu layanan bantuan...")
     func_menu_pelanggan()
 
-# ------------------------------------------------------- MENU UTAMA PELANGGAN ------------------------------------------------------- #
+# ====================================================================================================================================== #
+#                                                           MENU UTAMA PELANGGAN
+# ====================================================================================================================================== #
 def func_menu_pelanggan():
     pilihan = (input(Fore.CYAN + '''
 =====================================''' + Fore.WHITE +'''
@@ -444,9 +446,9 @@ def func_menu_pelanggan():
         print(Fore.RED + '⚠️  Pilihan nggak ada nih. Cek lagi yuk!')                                                                                     
         func_menu_pelanggan()
 
-# ================================================================================================================= #
-#                                               FUNGSI ADMIN - CRUD
-# ================================================================================================================= #
+# ====================================================================================================================================== #
+#                                                          FUNGSI ADMIN - CRUD
+# ====================================================================================================================================== #
 # Fungsi untuk menampikan menu admin
 def func_menu_admin():
     while True:
@@ -551,7 +553,7 @@ def create_mobil():
         'fitur_unggulan': fitur_unggulan
     })
 
-    print(Fore.GREEN + f'✔️ Mobil {model} dengan plat {plat} berhasil ditambahkan.\n')
+    print(Fore.GREEN + f'✔️  Mobil {model} dengan plat {plat} berhasil ditambahkan.\n')
 
 # Fitur 2: Read - Tampilan Seluruhan Data Mobil
 def read_mobil():
@@ -669,7 +671,7 @@ def update_mobil():
             mobil_ditemukan['fitur_unggulan'] = [fitur.strip() for fitur in fitur_unggulan_baru.split(',')]
 
         # Tampilkan hasil setelah update
-        print(Fore.GREEN + "\n✔️ Data mobil setelah diupdate:\n")
+        print(Fore.GREEN + "\n✔️  Data mobil setelah diupdate:\n")
         print(f"Plat Mobil     : {mobil_ditemukan['Plat']}")
         print(f"Model Mobil    : {mobil_ditemukan['Model']}")
         print(f"Tarif Harian   : Rp {mobil_ditemukan['Tarif Harian']}")
@@ -723,9 +725,9 @@ def delete_mobil():
                 print(Fore.CYAN + "Kembali ke menu admin.")
                 return  # Keluar dari fungsi jika pengguna memilih untuk tidak mencoba lagi
 
-# ================================================================================================================= #
-#                                                     MENU START
-# ================================================================================================================= #
+# ===================================================================================================================================== #
+#                                                         MENU START PROGRAM
+# ===================================================================================================================================== #
 def func_menu_awal():
     while True:
         pilihan_diri = input(Fore.YELLOW + '''    
